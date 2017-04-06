@@ -9,3 +9,5 @@ before_install:
   - opam update
 before_script:
   - opam pin add -y reason-bin .
+script:
+  - tree ~/.opam
