@@ -16,14 +16,17 @@ echo "Building on Arch: ${os}"
 
 repo=yunxing/reason-bin
 
-RELEASE_RESULT=
-
-RELEASE_ID=$(\
+RELEASE_RESULT=$(\
   curl --silent -H 'Accept: application/vnd.github.v3+json' \
        --user "${GITHUB_USER}:${GITHUB_TOKEN}" \
        -X POST --data "{\"tag_name\": \"${VERSION}-${os}\"}" \
-       https://api.github.com/repos/$repo/releases \
-      | python -c 'import sys, json; print json.load(sys.stdin)["id"]' \
+       https://api.github.com/repos/$repo/releases
+)
+
+echo "Result: $RELEASE_RESULT"
+
+RELEASE_ID=$(\
+  echo "$RELEASE_RESULT" | python -c 'import sys, json; print json.load(sys.stdin)["id"]'
 )
 
 if [ $? -ne 0 ]
