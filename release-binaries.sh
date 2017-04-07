@@ -12,6 +12,8 @@ else
     exit 1
 fi
 
+echo "Building on Arch: ${os}"
+
 repo=yunxing/reason-bin
 
 RELEASE_ID=$(\
@@ -21,6 +23,11 @@ RELEASE_ID=$(\
        https://api.github.com/repos/$repo/releases \
       | python -c 'import sys, json; print json.load(sys.stdin)["id"]' \
 )
+
+if [ $? -ne 0 ]
+then
+    cleanup
+fi
 
 echo "new release id: $RELEASE_ID"
 
