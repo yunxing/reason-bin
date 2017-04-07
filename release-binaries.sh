@@ -26,7 +26,8 @@ RELEASE_ID=$(\
 
 if [ $? -ne 0 ]
 then
-    cleanup
+    echo "Can't create a release: ${VERSION}-${os}"
+    exit 1
 fi
 
 echo "new release id: $RELEASE_ID"
