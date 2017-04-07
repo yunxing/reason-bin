@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-echo "Using username: ${GITHUB_USER} and token: ${GITHUB_TOKEN}"
+echo "Using username: ${GITHUB_USER}"
 
 VERSION=$(cat VERSION)
 
@@ -15,6 +15,8 @@ fi
 echo "Building on Arch: ${os}"
 
 repo=yunxing/reason-bin
+
+RELEASE_RESULT=
 
 RELEASE_ID=$(\
   curl --silent -H 'Accept: application/vnd.github.v3+json' \
