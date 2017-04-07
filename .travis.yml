@@ -1,5 +1,13 @@
 language: objective-c
 osx_image: xcode7.3
+
+env:
+  global:
+  # GITHUB USER
+  - secure: "PJvFLVLLphYAKA3tVfD7vsTvNudHUjGVlzPFKaJBiAzMJK3lnKRWooDCfymxFSBrMQQ44/0qAe9e0KCPvJhsZPKC/VS4fBz0LyVArjoTrCFDbo3jowDc5IZrFJ3m0vBqg54okRbV81fEA5TAn/gPa3Ei8L/vqpN+0lnKwlpAmEHhVrr1o8n8zugXUtmZPzqPTU/i3a9aadRixKCVHKxOmIvfG+lm//EOWphTfyJ8CAfVW0BFmz4M6Szc3fZ60SbooHujCAwWUZjOSoVPy+qZC4L0FG3xy+23B4O5A1KyUSZZMNnefbDHdVGAVwNGYmCN2E5gOMjDIfRUmrlEAPxbYRY5W/yH7gMV4IritcbhaTaUgAB5p5H0Eq8cMNKbNx4ewAPeHfwWvPZVDhcqloCGvBpH4toOj8/7kTcwW1erZzZtgfI3QrR/7sYbCqA976hLh2tZe4TUx9uytLnjwDO95JNcwk7myH1GnqU8rFPP43+7uY4DIPlkwJPBS92jqX3qvAo5FcJJoNEaI52hJbN0dVtS0OPtGUzo+4pNb4qSxq9knG71IApEcoXGHrkCCAcOnaIm4gAY3+ST3sxb0AahPjGqxGARGknsd1CtqEymELoNFWlCr1AK79R2SHfVju5woRHf6hcEZi32113SmypoH76/gzYyZ8sY0kGlqz9w1H4="
+  # GITHUB TOKEN
+  - secure: "aNJPAYojLjGlcn6ArTnBj3PBg+EUTdK9E7l9QKOnQY4JMTvyCbPKwxh0dgl+yoH1gd7nKT3+ftPnm5uK06uKQGadg90PzOct1ePcJWInU/wysQHphhyHSXxx+BhR7A0VlT23p/xTV7e9bNGGwFNNHEi9nS3XDW3j5OdGoWXSZdA/t+IiqbW3HIHvFPXVFXayARmRPMybUksvdAKJyaS4Ww7B320Y1bJ7LJ2aTFELA8eaU3y2AnjO45hs/AHoB1+jd0S8CuF4I6v5c6W/AAnNfTCEf/FMl7BJXwNHStvBVOV7PMEci8RDcMfahsCNQm2U902bkZH+0qPqrTBfTWTENstTAnmYDfOwTQ6Sg7rzh9W/mGLSkJk2IUZ9U2vCa9aDlL0kr2hxOJE3AMoW1oCpM9h7U+UhVy9xKtoGNz8iUF0uvFVPzyhv9rcRtR+gXKqAtWIRnOlOLYctWk24+x6pbdVqzdXYyvVlsIgIicBwfTogleISENrj/pIb1z71WQESpXUI/+h2KiEwIw3OpWGRTZNQvK7J5UL1WuQRId+Zwma3nIX5PIq+wXbjP3mfnkynLB4hGyz/W9H0qmT2ThftdVvfcmTyLZhQgah7mDvHT+zXrYctwTT2vJbd7YRvjOpC9AQXpjuw11B9AJKZEWS0vObfpxlQ0jHY2EARnCmCIV4="
+
 before_install:
   - brew update
   - brew install opam
@@ -10,4 +18,4 @@ before_install:
 before_script:
   - opam pin add -y reason-bin .
 script:
-  - tree ~/.opam
+  - ./release-binaries.sh
