@@ -14,7 +14,7 @@ fi
 
 echo "Building on Arch: ${os}"
 
-repo=yunxing/reason-bin
+repo="yunxing/reason-bin"
 
 RELEASE_RESULT=$(\
   curl --silent -H 'Accept: application/vnd.github.v3+json' \
