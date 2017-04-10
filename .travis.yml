@@ -1,9 +1,19 @@
-language: objective-c
-osx_image: xcode7.3
+language: cpp
+matrix:
+  include:
+    - compiler: ": Linux, ocaml 4.03.0, opam 1.2.0"
+      os: linux
+      env: OCAML_VERSION=4.02.3 OPAM_VERSION=1.2.0
 
-os:
-  - linux
-  - osx
+    - compiler: ": Mac, ocaml 4.03.0, opam 1.2.0"
+      os: osx
+      env: OCAML_VERSION=4.02.3 OPAM_VERSION=1.2.0
+
+addons:
+  apt:
+    packages:
+    - libelf-dev
+    - aspcud
 
 env:
   global:
@@ -12,14 +22,9 @@ env:
   # GITHUB TOKEN
   - secure: GfH1Bklasoaap8zxYSH49/p87SgF6hP51ixVcvWmbkDXRcdg+mWYS0qDy4yhtcuS2hptddj41498P79t3SS0QFos6wirSJexQv6QPVy3UpZezdYzpVsPX8l4EjUXPS32+aX87Ar+xcomLdZ1gl0wDMHq5is892RrttJQoS1V4Iv+INm0bRVPnT52oIPExvbkMkicJa//wn0kmejSW/msW3KdDITpKfKgmQ2f3NqJWug4zDs8iMBGgNFnQusb37K1rXdW7dFL73xmqVARGpxu9ToJ46Yzc9CeVYBAy+x7kUWKyvgO0StwcKav+8PRuEfNdj0Wjfm4Shq5z72l1GmvO0rL7Doep+Erudou53/W3XnFhsEl1EIhOWP3di8f21iWo0H39EzguZeY0XF9JAgXos9lVfhA9a1dFugFADyv79umyZMnSHALROoZdBNftWYBlDP1z/uo1MXPD4S6vFpz/J1URFxkOtwOiv5TCAq8Z8VwEidkWDZfvDuxIAi0cExPHcWsP6eA+HCWoYZi0CfN/AmZdmH135J6Uiiz8kUDASaHGgbwizxRTI3XFt1WbENhRCj3Nq7LQgD+GriOaJlhmolf5dNZSdZVqY9Iagw+raiaC4WHPRxIBKJqJgqX72tQXNnZo9fxhIYTK8eU7dzyCLlsXLw5EFqegPFqyiJ7rUs=
 
-before_install:
-  - brew update
-  - brew install opam
-  - opam init
-  - opam switch 4.02.3
-  - eval `opam config env`
-  - opam update
+before_install: bash -e resources/travis/before_install.sh
+
 before_script:
   - opam pin add -y reason-bin .
 script:
-  - ./release-binaries.sh
+  - bash -e ./release-binaries.sh
