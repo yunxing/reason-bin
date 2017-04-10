@@ -2,6 +2,8 @@ opam-version: "1.2"
 name: "reason-bin"
 version: "1.0.0"
 maintainer: "Yunxing Dai <nov503@gmail.com>"
+authors: [ "Yunxing Dai <nov503@gmail.com>" ]
+homepage: "https://github.com/yunxing/reason-bin"
 license: "BSD"
 depends: [
   "merlin-extend"           {>= "0.3"}
