@@ -9,12 +9,13 @@
   },
   "bin": {
       "refmt": "bin/refmt",
+      "ocamlmerlin-vanilla": "bin/ocamlmerlin-vanilla",
       "ocamlmerlin": "bin/ocamlmerlin",
       "ocamlmerlin-reason": "bin/ocamlmerlin-reason"
   },
   "scripts": {
       "postinstall": "make bin",
-      "prepublish": "rm bin/*; touch bin/ocamlmerlin-reason bin/ocamlmerlin bin/refmt"
+      "prepublish": "rm bin/*; touch bin/ocamlmerlin-reason bin/ocamlmerlin bin/ocamlmerlin-env bin/refmt"
   },
   "engines": {
     "node": ">=0.10.0"
