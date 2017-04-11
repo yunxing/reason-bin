@@ -1,6 +1,6 @@
 {
   "name": "reason-bin",
-  "version": "0.1.8",
+  "version": "0.2.0",
   "description": "Binary wrapper for reason utilities",
   "license": "BSD-3-Clause",
   "author": {
