@@ -1,6 +1,6 @@
 {
   "name": "reason-bin",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "Binary wrapper for reason utilities",
   "license": "BSD-3-Clause",
   "author": {
@@ -14,7 +14,7 @@
   },
   "scripts": {
       "postinstall": "make bin",
-      "prepublish": "rm bin/*; touch ocamlmerlin-reason ocamlmerlin refmt",
+      "prepublish": "rm bin/*; touch bin/ocamlmerlin-reason bin/ocamlmerlin bin/refmt"
   },
   "engines": {
     "node": ">=0.10.0"
