@@ -1,6 +1,6 @@
 {
   "name": "reason-bin",
-  "version": "0.2.0",
+  "version": "0.2.2",
   "description": "Binary wrapper for reason utilities",
   "license": "BSD-3-Clause",
   "author": {
@@ -10,12 +10,13 @@
   "bin": {
       "refmt": "bin/refmt",
       "ocamlmerlin-vanilla": "bin/ocamlmerlin-vanilla",
+
       "ocamlmerlin": "bin/ocamlmerlin",
       "ocamlmerlin-reason": "bin/ocamlmerlin-reason"
   },
   "scripts": {
       "postinstall": "make bin",
-      "prepublish": "rm bin/*; touch bin/ocamlmerlin-reason bin/ocamlmerlin bin/ocamlmerlin-env bin/refmt"
+      "prepublish": "rm bin/*; touch bin/ocamlmerlin-reason bin/ocamlmerlin bin/ocamlmerlin-vanilla bin/refmt"
   },
   "engines": {
     "node": ">=0.10.0"

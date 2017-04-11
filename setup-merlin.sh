@@ -9,4 +9,6 @@ while [ -h "$SOURCE" ]; do # resolve $SOURCE until the file is no longer a symli
 done
 DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
 
-echo "env OCAMLFIND_CONF=\"$PWD/findlib.conf\" $DIR/ocamlmerlin-vanilla" > $PWD/bin/ocamlmerlin
+echo "#!/usr/bin/env bash" > $PWD/bin/ocamlmerlin
+echo "env OCAMLFIND_CONF=\"$PWD/findlib.conf\" $DIR/bin/ocamlmerlin-vanilla" >> $PWD/bin/ocamlmerlin
+chmod +x $PWD/bin/ocamlmerlin
