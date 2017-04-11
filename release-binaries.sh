@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 echo "Using username: ${GITHUB_USER}"
 
-VERSION=$(shell node -p 'require("./package.json").version')
+VERSION=$(node -p 'require("./package.json").version')
 
 if [ "$(uname)" == "Darwin" ]; then
     os="darwin"
