@@ -1,0 +1,22 @@
+{
+  "name": "reason-bin",
+  "version": "0.1.7",
+  "description": "Binary wrapper for reason utilities",
+  "license": "BSD-3-Clause",
+  "author": {
+    "name": "Yunxing Dai",
+    "email": "nov503@gmail.com"
+  },
+  "bin": {
+      "refmt": "bin/refmt",
+      "ocamlmerlin": "bin/ocamlmerlin",
+      "ocamlmerlin-reason": "bin/ocamlmerlin-reason"
+  },
+  "scripts": {
+      "postinstall": "make bin",
+      "prepublish": "rm bin/*; touch ocamlmerlin-reason ocamlmerlin refmt",
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  }
+}
