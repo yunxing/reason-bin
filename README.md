@@ -14,4 +14,7 @@ Currently three binaries are provided:
 - ocamlmerlin and ocamlmerlin-reason -- [Merlin](https://github.com/ocaml/merlin) provides SDK level integration with editors
 - more -- Submit an issue to ask for more prebuilt binaries!
 
-
+# Supported platforms
+- Linux 64 bits
+- Darwin 64 bits
+Help needed to get Windows support!
