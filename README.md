@@ -11,7 +11,7 @@ TODO: add how one can test the installation here
 # What's inside
 Currently three binaries are provided:
 - refmt -- For editors to reformat your reason files
-- ocamlmerlin and ocamlmerlin-reason -- (merlin)[https://github.com/ocaml/merlin] provides SDK level integration 
+- ocamlmerlin and ocamlmerlin-reason -- [Merlin](https://github.com/ocaml/merlin) provides SDK level integration with editors
 - more -- Submit an issue to ask for more prebuilt binaries!
 
 
