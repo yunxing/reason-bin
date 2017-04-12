@@ -10,7 +10,6 @@
   "bin": {
       "refmt": "bin/refmt",
       "ocamlmerlin-vanilla": "bin/ocamlmerlin-vanilla",
-
       "ocamlmerlin": "bin/ocamlmerlin",
       "ocamlmerlin-reason": "bin/ocamlmerlin-reason"
   },
