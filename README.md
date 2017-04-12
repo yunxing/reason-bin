@@ -17,4 +17,5 @@ Currently three binaries are provided:
 # Supported platforms
 - Linux 64 bits
 - Darwin 64 bits
+
 Help needed to get Windows support!
