@@ -1,0 +1,6 @@
+bin/*
+findlib.conf
+node_modules
+lib/*
+man/*
+ocaml_src/*
