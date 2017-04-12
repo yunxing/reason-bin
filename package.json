@@ -16,7 +16,7 @@
   },
   "scripts": {
       "postinstall": "make bin",
-      "prepublish": "rm bin/*; touch bin/ocamlmerlin-reason bin/ocamlmerlin bin/ocamlmerlin-vanilla bin/refmt"
+      "prepublish": "mkdir -p bin; rm bin/*; touch bin/ocamlmerlin-reason bin/ocamlmerlin bin/ocamlmerlin-vanilla bin/refmt"
   },
   "engines": {
     "node": ">=0.10.0"
