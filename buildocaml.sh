@@ -1,5 +1,5 @@
 #!/bin/sh
-set -e
+set -x
 
 export OCAMLPARAM='_,bin-annot=1'
 export OCAMLRUNPARAM=b
@@ -10,6 +10,7 @@ then
     BSBDIR=$(dirname $(realpath $BSB))
     LIBDIR="$($BSBDIR/bsc.exe -where)/.."
 else
+    set -e
     OCAML=ocaml_src
     rm -rf $OCAML
     echo "creating ocaml from github"
