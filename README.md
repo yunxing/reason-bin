@@ -1,12 +1,11 @@
 # reason-bin [![Build Status](https://travis-ci.org/yunxing/reason-bin.svg?branch=master)](https://travis-ci.org/yunxing/reason-bin)
 
-Contains all prebuilt binaries to set up a dev environment. 
+Contains the prebuilt binaries needed for Reason's JavaScript workflow, as described [here](http://facebook.github.io/reason/jsWorkflow.html#javascript-workflow-editor-setup-global-utilities).
 
 # Usage
 ```
 npm install -g reason-bin
 ```
-TODO: add how one can test the installation here
 
 # What's inside
 Currently three binaries are provided:
@@ -18,4 +17,4 @@ Currently three binaries are provided:
 - Linux 64 bits
 - Darwin 64 bits
 
-Help needed to get Windows support!
+**Help needed to get Windows support!**
