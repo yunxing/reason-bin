@@ -6,6 +6,10 @@ Contains the prebuilt binaries needed for Reason's JavaScript workflow, as descr
 ```
 npm install -g reason-bin
 ```
+Make sure it works:
+```
+ocamlmerlin -version
+```
 
 # What's inside
 Currently three binaries are provided:
