@@ -6,7 +6,7 @@ authors: [ "Yunxing Dai <nov503@gmail.com>" ]
 homepage: "https://github.com/yunxing/reason-bin"
 license: "BSD"
 depends: [
-  "merlin-extend"           {>= "0.3"}
-  "merlin"
-  "reason"
+  "merlin-extend"           {= "0.3"}
+  "merlin"                  {= "2.5.3"}
+  "reason"                  {= "1.13.3"}
 ]
